@@ -1,18 +1,17 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  ...
-</head>
-<body>
-  ...
-    <div id="contenu">
-      <?php foreach ($billets as $billet): ?>
-        <article>
-          ...
-        </article>
-        <hr />
-      <?php endforeach; ?> 
-    </div> <!-- #contenu -->
-  ...
-</body>
-</html>
+<?php $titre = 'Mon Blog'; ?>
+
+<?php ob_start(); ?>
+<?php foreach ($billets as $billet): ?>
+  <article>
+    <header>
+      <a href="<?= "billet.php?id=" . $billet['id'] ?>">
+        <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
+      </a>
+      <time><?= $billet['date'] ?></time>
+    </header> 
+  </article>
+  <hr />
+<?php endforeach; ?>
+<?php $contenu = ob_get_clean(); ?>
+
+<?php require 'gabarit.php'; ?>
