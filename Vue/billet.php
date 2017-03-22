@@ -1,6 +1,6 @@
 <?php
 
-require 'Modele.php';
+require '../Modele/Modele.php';
 
 try {
   if (isset($_GET['id'])) {
