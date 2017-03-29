@@ -24,7 +24,9 @@ h1 {
 .titreBillet {
     margin-bottom : 0px;
 }
-
+#txtCommentaire {
+    width: 50%;
+}
 #global {
     min-height: 100%;  /* Voir commentaire sur html et body plus haut */
     background: #333534;

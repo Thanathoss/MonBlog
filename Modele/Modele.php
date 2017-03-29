@@ -21,7 +21,7 @@ abstract class Modele {
     if ($this->bdd == null) {
       // Création de la connexion
       $this->bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8',
-        'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        'ts2', 'ts2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     }
     return $this->bdd;
   }
